@@ -1,0 +1,255 @@
+You are a world-class Frontend Engineer, UI/UX Architect, and Product Designer
+who has built multiple production-grade academic and enterprise applications.
+
+Your task is to design the complete frontend UI/UX for an
+“Academic Course Outcome–Driven Intelligent Question Paper Generation System”.
+
+This system is used by faculty and academic administrators.
+Design for clarity, trust, and academic discipline.
+
+==================================================
+1. CORE DESIGN PHILOSOPHY
+==================================================
+
+• Clean, minimal, professional UI
+• No clutter, no gimmicks, no AI buzzwords
+• Deterministic, guided academic workflow
+• Step-by-step navigation (no skipping steps)
+• Faculty-first UX, not tech-first UX
+
+==================================================
+2. USER ROLES
+==================================================
+
+• Faculty (primary user)
+• Admin (secondary user)
+
+==================================================
+3. APPLICATION MODULES & PAGES (MANDATORY)
+==================================================
+
+### 3.1 Authentication Module
+Pages:
+• Login Page
+• Register Page
+
+Purpose:
+Secure access with role-based routing.
+
+--------------------------------------------------
+
+### 3.2 Faculty Dashboard Module
+Pages:
+• Faculty Dashboard (Home)
+
+Purpose:
+Central control panel showing:
+• Create New Question Paper (primary CTA)
+• Recent papers
+• CO coverage summary
+• Status indicators
+
+--------------------------------------------------
+
+### 3.3 Course Context Module
+Pages:
+• Course Setup Page
+
+Purpose:
+Collect:
+• Subject name
+• Semester
+• Regulation
+• Academic year
+
+This context remains locked for the workflow.
+
+--------------------------------------------------
+
+### 3.4 Syllabus Input Module
+Pages:
+• Syllabus Entry Page
+
+Purpose:
+• Accept unit-wise syllabus input
+• Preview extracted topics
+• Build faculty trust in system understanding
+
+--------------------------------------------------
+
+### 3.5 Course Outcomes (CO) Module
+Pages:
+• Course Outcomes Entry Page
+
+Purpose:
+• Accept 3 or 6 COs
+• Highlight Bloom’s verbs
+• Warn about weak outcomes
+
+--------------------------------------------------
+
+### 3.6 Sample Questions Module
+Pages:
+• Sample Questions Input Page
+
+Purpose:
+• Learn question patterns
+• Marks-based structure detection
+• Clearly indicate samples are not reused
+
+--------------------------------------------------
+
+### 3.7 Blueprint Configuration Module
+Pages:
+• Blueprint Setup Page
+
+Purpose:
+• Define marks distribution
+• CO-wise question allocation
+• Enforce total marks
+• Validate blueprint before proceeding
+
+--------------------------------------------------
+
+### 3.8 Question Generation Module
+Pages:
+• Generate Question Paper Page
+
+Purpose:
+• Trigger controlled generation
+• Show deterministic progress
+• Prevent multiple submissions
+
+--------------------------------------------------
+
+### 3.9 Question Paper Preview Module
+Pages:
+• Preview Question Paper Page
+
+Purpose:
+• Exam-ready layout
+• CO & marks visible per question
+• Regenerate or finalize actions
+
+--------------------------------------------------
+
+### 3.10 Export & Finalization Module
+Pages:
+• Export / Download Page
+
+Purpose:
+• Download PDF
+• Lock question paper
+• Ensure academic finality
+
+--------------------------------------------------
+
+### 3.11 Analytics & Explainability Module
+Pages:
+• CO Analytics Page
+
+Purpose:
+• CO vs Marks visualization
+• Difficulty balance
+• Transparency of ML decisions
+
+--------------------------------------------------
+
+### 3.12 History & Audit Module
+Pages:
+• Generated Papers History Page
+
+Purpose:
+• Academic auditability
+• Avoid repetition
+• Regeneration traceability
+
+--------------------------------------------------
+
+### 3.13 Admin Module (Optional Extension)
+Pages:
+• Admin Dashboard
+• Faculty Management
+• System Logs
+
+==================================================
+4. NAVIGATION & WORKFLOW RULES
+==================================================
+
+• Left sidebar navigation
+• Locked step-based workflow:
+  Course → Syllabus → COs → Samples → Blueprint → Generate → Preview → Export
+• Disabled steps must be visually clear
+• Show progress indicator at all times
+
+==================================================
+5. VISUAL DESIGN SYSTEM
+==================================================
+
+Color:
+• Primary: Academic Blue
+• Secondary: Slate Gray
+• Accent: Muted Green / Orange
+• Background: White / Off-white
+
+Typography:
+• Clean sans-serif
+• Clear hierarchy
+• High readability
+
+Layout:
+• Card-based sections
+• Strong spacing
+• Minimal shadows
+• Professional institutional feel
+
+==================================================
+6. FORM & INTERACTION DESIGN
+==================================================
+
+• Clear labels above inputs
+• Helper text below fields
+• Real-time validation
+• Academic-friendly error messages
+• Draft auto-save where appropriate
+
+==================================================
+7. AI / ML TRANSPARENCY UX
+==================================================
+
+• Show detected syllabus topics
+• Show CO mappings
+• Show CO-wise marks distribution
+• Explain decisions simply
+• No technical jargon in UI
+
+==================================================
+8. FEEDBACK & STATES
+==================================================
+
+• Deterministic loading indicators
+• Clear success messages
+• Helpful academic error messages
+• Never expose raw system errors
+
+==================================================
+9. WHAT TO AVOID (STRICT)
+==================================================
+
+❌ Flashy UI
+❌ Casual language
+❌ Overloaded dashboards
+❌ AI hype language
+❌ Ambiguous actions
+
+==================================================
+10. OUTPUT EXPECTATION
+==================================================
+
+Design:
+• Page-wise UI layouts
+• Component structure
+• Clean UX flows
+• Professional academic-grade frontend
+
+Design as if this product will be deployed in a real university.
