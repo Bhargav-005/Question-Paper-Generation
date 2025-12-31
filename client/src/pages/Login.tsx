@@ -141,8 +141,15 @@ export default function Login() {
             </div>
           </div>
           
-          <div className="text-center text-sm text-muted-foreground">
-            Restricted access. All activities are logged for audit purposes.
+          <div className="space-y-3 text-center text-sm">
+            <div className="text-muted-foreground">
+              Restricted access. All activities are logged for audit purposes.
+            </div>
+            <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg p-3 text-left">
+              <p className="text-[11px] font-semibold text-blue-900 dark:text-blue-200 uppercase mb-2">Demo Credentials</p>
+              <p className="text-[11px] text-blue-800 dark:text-blue-300"><span className="font-mono">Email:</span> faculty@university.edu</p>
+              <p className="text-[11px] text-blue-800 dark:text-blue-300"><span className="font-mono">Password:</span> demo123</p>
+            </div>
           </div>
         </div>
       </div>
