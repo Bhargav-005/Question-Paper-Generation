@@ -53,6 +53,42 @@ export default function CreateFaculty() {
 
   const handleCreate = (e) => {
     e.preventDefault();
+
+    // Validation patterns
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    // Email validation
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Validation Error",
+        description: "Enter a valid email address",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Institutional email validation (@gmrit.edu.in)
+    const emailLower = formData.email.trim().toLowerCase();
+    if (!emailLower.endsWith("@gmrit.edu.in")) {
+      toast({
+        title: "Validation Error",
+        description: "Only institutional email (@gmrit.edu.in) is allowed",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Password validation
+    if (!passwordRegex.test(formData.password)) {
+      toast({
+        title: "Validation Error",
+        description: "Password must meet complexity requirements (8+ chars, uppercase, lowercase, number, special character)",
+        variant: "destructive"
+      });
+      return;
+    }
+
     createMutation.mutate({
       name: formData.name,
       email: formData.email,

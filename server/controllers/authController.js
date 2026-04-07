@@ -17,6 +17,33 @@ export const register = async (req, res) => {
       });
     }
 
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({
+        success: false,
+        message: "Enter a valid email address"
+      });
+    }
+
+    // Institutional email restriction (@gmrit.edu.in)
+    const institutionalEmail = email.trim().toLowerCase();
+    if (!institutionalEmail.endsWith("@gmrit.edu.in")) {
+      return res.status(400).json({
+        success: false,
+        message: "Only institutional email (@gmrit.edu.in) is allowed"
+      });
+    }
+
+    // Password complexity validation
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      return res.status(400).json({
+        success: false,
+        message: "Password must meet complexity requirements"
+      });
+    }
+
     // Check if user already exists
     const existing = await db.query(
       "SELECT * FROM users WHERE email = $1",
