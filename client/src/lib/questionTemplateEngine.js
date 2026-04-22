@@ -41,9 +41,9 @@ const TEMPLATES = {
 
 const MARK_WEIGHTS = [2, 5, 6, 8];
 const MARKS_COUNTS = {
-  2: 3,
-  5: 3,
-  6: 2,
+  2: 5,
+  5: 4,
+  6: 3,
   8: 2
 };
 
